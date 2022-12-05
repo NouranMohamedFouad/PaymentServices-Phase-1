@@ -10,23 +10,23 @@ public abstract class serviceProvider
     	form=new Form();
     }
 	
-	public void setName(String n) //change
+	public void setName(String n) 
 	{
 		name=n;
 	}
-	public String getName() //change
+	public String getName() 
 	{
 		return name; 
 	}
-	public abstract void add(String s,Iform f); //change
+	public abstract void add(String s,Iform f); 
 	public abstract void chooseProvider(); 
 	/////////////////////////////
-	public void handleRequest()
+	public void handleRequest()  
 	{
 		
 	}
 	//////////////////////////////
-	public void setFormDetails(int amount ,String phoneNumber,Iform f) //change
+	public void setFormDetails(int amount ,String phoneNumber,Iform f) 
 	{
 		form=f;
 		System.out.println(form.create());

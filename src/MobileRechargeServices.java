@@ -4,15 +4,15 @@ public class MobileRechargeServices implements Service
 	
 	int size=0;
 	int i=0; 
-	private MobileRechargeServicesProvider[] arr;
+	private MobileRechargeServicesProvider[] arr; 
 	Iform f;
 	//////////////////////////////
 	public MobileRechargeServices(int s,Iform form)
 	{
-		f=form;
+		f=form; 
 		size=s; 
 		arr=new MobileRechargeServicesProvider[size]; 
-		for(int i=0;i<size;i++)
+		for(int i=0;i<size;i++) 
 		{
 			arr[i]=new MobileRechargeServicesProvider(); 
 			arr[i].setName("---");                    	 
@@ -47,7 +47,6 @@ public class MobileRechargeServices implements Service
 			 System.out.println(arr[i].getName());
 		}
 		*/
-		
 		return arr;
 	}
 }

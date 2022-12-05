@@ -36,11 +36,12 @@ public class Main
 		f3=new textFeild(f3); 
 		f3=new dropDownFeild(f3);
 		f3= new dropDownFeild(f3);
-
+        
 		
-		String service="landline";
-		Service s; 
-		if(service=="landline") 
+		String serviceName="landline";
+		
+		/*Service s; 
+		if(service=="landline")  
 		{
 			s=new LandlineServices(5,f1);
 		}
@@ -60,46 +61,51 @@ public class Main
 		{
 			throw new Exception("This Service Is Not SUPPORTED");
 		}
+		*/
 		//serviceProvider sp=s.createServiceProvider();
 		
 		//sp.chooseProvider();
 		//s.createServiceProvider("vodafone",f);
 		
-		serviceProvider p[]=s.returnServiceProviders(); 
+		//serviceProvider p[]=s.returnServiceProviders(); 
 		
 		//s.createServiceProvider("quarter recipient");
 		 
-		//Queue<String> ar=s.returnServiceProviders(); 
-		Transaction t=new Transaction();
+        userController controller=new userController() ; 
+		//user.SginIn(e,e); 
+        //user.SignUp("nouran", "nouran.loly","123"); 
+        //controller.SignIn("nouran.loly","123");  
+		//user.SginUp("nouran","nouran.loly","123"); 
+        controller.searchForService(serviceName, f3); 
+		
+		Transaction t=new Transaction(); 
 		//t.addPaymentTrans(5);
 		t.addPaymentTrans(2);
 		t.addPaymentTrans(3);
 		Wallet w=new Wallet();
-		Refund r=new Admin(t);
-		r.approveRefund(10, w,5);
+		Refund r=new Admin(t);  
+		User u=new User(w);
+		//r.approveRefund(10, w,3);
+		//r.approveRefund(20, w,2);
+		//u.askForRefund(10,r,2);
+		controller.requestRefund(u, 100, r, 2); 
 		System.out.println(w.getAmount()); 
-		r.approveRefund(10, w,2);
-		System.out.println(w.getAmount()); 
-		r.approveRefund(10, w,3); 
-		System.out.println(w.getAmount()); 
-		Admin d=new Admin(t);
-		d.listAllPaymentT();
-		d.listAllRefundT();
-		/*int arr[]=t.returnPaymentArr();
-		 for(int i=0;i<5;i++)
-		{
-			 System.out.println(arr[i]);	   
-		}*/
-		// System.out.println(f.display());
-		p[0].chooseProvider();
+		Admin d=new Admin(t);  
+		//d.listAllPaymentT();
+		
+		//p[0].chooseProvider();
 		//p[0].setFormDetails(10,"fg3hv",f);
 		//p[0].add("hi");
 		
-	    for(int i=0;i<5;i++)
+	    /*for(int i=0;i<5;i++)
 		{
 			 System.out.println(p[i].getName());	   
 		}
-        try
+		*/
+		
+		
+		
+        /*try
         {
         	//s.createServiceProvider("hello");
      	    FileWriter file=null;
@@ -118,6 +124,6 @@ public class Main
         {
             except.printStackTrace();
         }
-        
+        */
 	}
 }

@@ -8,10 +8,9 @@ public class Admin implements Refund
 	//////
 	public Admin(Transaction t) 
 	{
-		
 	    refund=new realRefund();
-	    transaction=t; 
-	}
+	    transaction=t;  
+	} 
 	@Override 
 	public void approveRefund(int amount,Wallet w,int id)
 	{
@@ -24,13 +23,6 @@ public class Admin implements Refund
 		{
 			System.out.println("the transaction is not available ");
 		}
-		
-		
-		
-	}
-	public void addServiceProvider(Service s,String name) 
-	{
-		
 	}
 	public void addDisc(Discount d)
 	{
@@ -42,8 +34,7 @@ public class Admin implements Refund
 		for(int i=0;i<arr.length;i++)
 		{
 			 System.out.println(arr[i]);	   
-		}
-		
+		} 
 	}
 	public void listAllRefundT()
 	{
@@ -77,7 +68,7 @@ public class Admin implements Refund
 				check=true;
 				break;
 			}
-		}
+		} 
 		return check;
 	}	
 }

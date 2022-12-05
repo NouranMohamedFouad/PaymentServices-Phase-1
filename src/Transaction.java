@@ -7,7 +7,7 @@ public class Transaction
 	private int paymentArr[]=new int[5];
 	private int refundArr[]=new int[5];
 	private int walletArr[]=new int[5]; 
-	private int id;
+	private int id; 
 	//////
 	public int[] returnPaymentArr()
 	{
@@ -39,6 +39,6 @@ public class Transaction
 	}
 	public int getId()
 	{
-		return id;
+		return id; 
 	}
 }
